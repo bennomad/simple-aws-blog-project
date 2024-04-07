@@ -35,7 +35,7 @@ The architecture centers around AWS services to manage the blog's operations. Th
     - Assign appropriate roles for DynamoDB access.
 
 3. **DynamoDB Table**:
-    - Set up a DynamoDB table named `BlogPosts` with a primary key `id`.
+    - Set up a DynamoDB table named `BlogPosts` with a primary key `postID`.
 
 4. **API Gateway**:
     - Create a new API in API Gateway.
