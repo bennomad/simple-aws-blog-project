@@ -1,0 +1,14 @@
+stages:
+  - deploy
+
+variables:
+  S3_BUCKET_NAME: simple-blog-project
+
+deploy_to_s3:
+  image: amazon/aws-cli
+  stage: deploy
+  script:
+    - aws s3 sync frontend/ s3://simple-blog-project --delete --acl public-read
+  only:
+    - main
+
