@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Simple Blog Platform</h1>
+            <div class="create-post-container">
+                <h2>Create a New Post</h2>
+                <form id="createPostForm">
+                    <input type="text" id="postTitle" placeholder="Title" required>
+                    <textarea id="postContent" placeholder="Content" required></textarea>
+                    <button type="submit">Create Post</button>
+                </form>
+            </div>
+        </header>
+        <main>
+            <section id="blogPosts">
+                <h2>Posts</h2>
+                <div id="posts" class="posts"></div>
+            </section>
+        </main>
+    <!-- Hidden form for updating a post -->
+    <section id="updatePostSection" style="display:none;">
+        <h2>Update Post</h2>
+        <form id="updatePostForm">
+            <input type="hidden" id="updatePostID">
+            <input type="text" id="updatePostTitle" placeholder="Title" required>
+            <textarea id="updatePostContent" placeholder="Content" required></textarea>
+            <button type="submit">Update Post</button>
+        </form>
+    </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

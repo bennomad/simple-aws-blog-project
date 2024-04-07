@@ -1,0 +1,179 @@
+/* Base Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+header h1 {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+header {
+    background-color: #333;
+}
+.create-post-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ccc;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    order: 2;
+}
+.main-content {
+    min-height: calc(100vh - 550px); /* Adjust 150px to your header's actual height */
+}
+
+aside {
+    flex: 1;
+    order: 1;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+
+/* Form Styles */
+input[type="text"], textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Post Styles */
+.post {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 60px;
+    position: relative;
+    margin-bottom: 20px; /* Space between posts */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.post:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.post-title {
+    background-color: #fff;
+    padding: 10px 20px;
+    position: absolute;
+    top: -20px; /* Adjust as necessary */
+    left: 20px;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: calc(100% - 40px); /* Account for padding */
+    box-sizing: border-box;
+}
+
+.post-content {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6; /* Improves readability */
+    text-align: justify; /* Justifies the text for a cleaner look */
+}
+
+/* Style for action buttons within a post */
+.post-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px; /* Add some space between the content and the buttons */
+}
+
+.post button {
+    margin-left: 10px;
+}
+
+#updatePostSection {
+    background-color: #f9f9f9; /* Matching background color */
+    padding: 20px; /* Consistent padding */
+    margin: 20px 0; /* Margin to separate from other content */
+    border-radius: 8px; /* If you're using card style */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional shadow for depth */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the form elements if the container is wider */
+}
+
+#updatePostSection form {
+    width: 100%; /* Ensures form takes full container width */
+    max-width: 500px; /* Limits form width for larger screens */
+}
+
+#updatePostSection input[type="text"], #updatePostSection textarea {
+    width: 100%; /* Full width inputs */
+    padding: 8px; /* Consistent padding */
+    margin-top: 10px; /* Spacing between inputs */
+    border: 1px solid #ccc; /* Border style matching other forms */
+    border-radius: 4px; /* Consistent border radius */
+}
+
+#updatePostSection button {
+    background-color: #4CAF50; /* Matching button color */
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px; /* Space above the button */
+    border: none;
+    border-radius: 4px; /* Consistent border radius */
+    cursor: pointer;
+}
+
+#updatePostSection button:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Typography */
+@media screen and (min-width: 600px) {
+    .create-post-container,
+        main {
+            padding: 15px;
+        }
+    .post {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    button {
+        width: auto;
+        padding: 10px 20px;
+    }
+
+    input[type="text"], textarea {
+        width: calc(100% - 22px); /* Adjusting for padding and border */
+    }
+}
